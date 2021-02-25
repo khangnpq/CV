@@ -166,7 +166,7 @@ jQuery(document).ready(function($) {
     $contactform.submit(function() {
         $.ajax({
             type: "POST",
-            url: "php/contact.php",
+            url: "../assets/php/contact.php",
             data: $(this).serialize(),
             success: function(msg)
             {
@@ -174,31 +174,31 @@ jQuery(document).ready(function($) {
                 var output_error = '';
 
                 if (msg_error.indexOf('error-message') != -1) {
-                    $("#contact-message").addClass("has-error");
-                    $("#contact-message").removeClass("has-success");
+                    $("#message-contact").addClass("has-error");
+                    $("#message-contact").removeClass("has-success");
                     output_error = 'Please enter your message.';
                 } else {
-                    $("#contact-message").addClass("has-success");
-                    $("#contact-message").removeClass("has-error");
+                    $("#message-contact").addClass("has-success");
+                    $("#message-contact").removeClass("has-error");
                 }
 
                 if (msg_error.indexOf('error-email') != -1) {
 
-                    $("#contact-email").addClass("has-error");
-                    $("#contact-email").removeClass("has-success");
+                    $("#email-contact").addClass("has-error");
+                    $("#email-contact").removeClass("has-success");
                     output_error = 'Please enter valid e-mail.';
                 } else {
-                    $("#contact-email").addClass("has-success");
-                    $("#contact-email").removeClass("has-error");
+                    $("#email-contact").addClass("has-success");
+                    $("#email-contact").removeClass("has-error");
                 }
 
                 if (msg_error.indexOf('error-name') != -1) {
-                    $("#contact-name").addClass("has-error");
-                    $("#contact-name").removeClass("has-success");
+                    $("#name-contact").addClass("has-error");
+                    $("#name-contact").removeClass("has-success");
                     output_error = 'Please enter your name.';
                 } else {
-                    $("#contact-name").addClass("has-success");
-                    $("#contact-name").removeClass("has-error");
+                    $("#name-contact").addClass("has-success");
+                    $("#name-contact").removeClass("has-error");
                 }
 
 
@@ -211,9 +211,9 @@ jQuery(document).ready(function($) {
 
 
                     $(".reset").trigger('click');
-                    $("#contact-name").removeClass("has-success");
-                    $("#contact-email").removeClass("has-success");
-                    $("#contact-message").removeClass("has-success");
+                    $("#name-contact").removeClass("has-success");
+                    $("#email-contact").removeClass("has-success");
+                    $("#message-contact").removeClass("has-success");
 
                 } else {
 
