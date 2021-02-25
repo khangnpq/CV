@@ -68,7 +68,7 @@ jQuery(document).ready(function($) {
 
     $(".content_2").mCustomScrollbar({
         scrollInertia: 0,
-        mouseWheelPixels: 250,
+        mouseWheelPixels: 500,
         theme: "dark-2",
         contentTouchScroll: true,
         advanced: {
