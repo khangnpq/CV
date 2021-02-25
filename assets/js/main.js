@@ -67,7 +67,9 @@ jQuery(document).ready(function($) {
     /* ---------------------------------------------------------------------- */
 
     $(".content_2").mCustomScrollbar({
-        mouseWheelPixels: 1000,
+        scrollInertia: 0,
+        mouseWheelPixels: 170,
+        autoDraggerLength:false,
         theme: "dark-2",
         contentTouchScroll: true,
         advanced: {
