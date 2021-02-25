@@ -67,6 +67,9 @@ jQuery(document).ready(function($) {
     /* ---------------------------------------------------------------------- */
 
     $(".content_2").mCustomScrollbar({
+        scrollInertia: 0,
+        mouseWheelPixels: 170,
+        autoDraggerLength:false,
         theme: "dark-2",
         contentTouchScroll: true,
         advanced: {
@@ -165,7 +168,7 @@ jQuery(document).ready(function($) {
     $contactform.submit(function() {
         $.ajax({
             type: "POST",
-            url: "php/contact.php",
+            url: "../assets/php/contact.php",
             data: $(this).serialize(),
             success: function(msg)
             {
